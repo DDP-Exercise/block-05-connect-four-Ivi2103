@@ -1,0 +1,93 @@
+body {
+    background: #4a014a;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#board {
+    display: flex;
+    gap: 5px;
+    background: #3a003a;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.cell {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #1a001a;
+    border: 2px solid #5a005a;
+}
+
+.cell.pink {
+    background: #ff69b4;
+}
+
+.cell.green {
+    background: #00810c;
+}
+
+.cell.winner {
+    animation: pulse 0.6s infinite alternate;
+    background: gold;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.15);
+    }
+}
+
+.player-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.player-card {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background: #3a003a;
+}
+
+.player-card.active {
+    border-color: #ff69b4;
+}
+
+.images img {
+    background-size: cover;
+    width: auto;
+    height: 459px;
+    border-radius: 12px;
+    border: 3px solid #630073;
+}
