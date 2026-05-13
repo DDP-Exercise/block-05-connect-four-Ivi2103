@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <title>Connect Four</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--TODO: Build the Markup for your Game. Don't forget to style it in a cascading stylesheet. -->
+
+<h1>Connect Four</h1>
+
+<div class="player-cards">
+    <div class="player-card" data-player="pink">🩷 Glinda</div>
+    <div class="player-card" data-player="green">💚 Elphaba</div>
+</div>
+
+<div id="current-player"></div>
+
+
+<div class="game-container">
+
+    <div class="images">
+        <img src="Glinda.jpg" alt="Glinda">
+    </div>
+
+    <div id="board"></div>
+
+    <div class="images">
+        <img src="Elphaba.jpg" alt="Elphaba">
+    </div>
+    <div id="buttons"></div>
+
+</div>
+
+
+<script src="js/model.connectfour.js"></script>
+<script src="js/view.console.js"></script>
+<script src="js/view.polished.js"></script>
+<script src="js/controller.connectfour.js"></script>
+
+<script>
+    controller.init();
+</script>
 
 </body>
 </html>

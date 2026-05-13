@@ -44,4 +44,29 @@
 //TODO: Create your controller-object. When initiated, it should boot
 //      the view (or views, if you decide to make a console-view).
 
-//TODO: Add EventListeners, to forward the user inputs to the model.
+const controller = {
+
+    init() {
+        view.init();
+        model.init();
+        this.addEventListeners();
+    },
+
+    //TODO: Add EventListeners, to forward the user inputs to the model.
+
+    addEventListeners() {
+        document.addEventListener("connectfour:columnClicked", function(event) {
+            const col = event.detail.col;
+            const success = model.insertStone(col);
+
+            // Wenn die Spalte voll ist, View bescheid geben
+            if (!success) {
+                view.showColumnFullWarning(col);
+            }
+        });
+
+    }
+
+};
+
+
